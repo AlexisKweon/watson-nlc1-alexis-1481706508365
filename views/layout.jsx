@@ -22,6 +22,10 @@ function Layout(props) {
         <link rel="stylesheet" href="/css/style.css" />
       </head>
       <body>
+      <Header
+          mainBreadcrumbs="Natural Language Classifier"
+          mainBreadcrumbsUrl="http://www.ibm.com/watson/developercloud/nl-classifier.html"
+        />
 
         <div id="root">
           {props.children}
