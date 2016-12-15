@@ -127,14 +127,6 @@ export default React.createClass({
                   className="base--a"
                   onClick={this.onSampleQuestionClick}
                 >
-                  ------------------------------------------------------------------------------------------------------
-                </a>
-              </li>
-              <li className="base--li">
-                <a
-                  className="base--a"
-                  onClick={this.onSampleQuestionClick}
-                >
                   보안카드를 잃어버렸는데, 재발급 가능한가요?
                 </a>
               </li>
@@ -150,7 +142,7 @@ export default React.createClass({
           </div>
           <div className="sample-questions--right">
             <p className="base--p">분류기는 훈련을 받지 않은 용어로 스코어링을 하는 경우가 많습니다. 
-              트레이닝 질문 데이터에서는 "잃어버리다" 또는 "시기" 이라는 단어는&nbsp;
+              트레이닝 질문 데이터에서는 "잃어버리다" 또는"시기" 이라는 단어는&nbsp;
               <a
                 className="base--a"
                 href="https://github.com/watson-developer-cloud/natural-language-classifier-
