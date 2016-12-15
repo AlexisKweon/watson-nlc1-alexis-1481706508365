@@ -47,14 +47,19 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <h2 className="base--h2">Ask a question about the weather</h2>
-        <p className="base--p" >Watch the Natural Language Classifier
-          categorize your weather-related question. In this demo, the classifier is
-          trained to determine whether the question is related
-          to <code className="base--code">temperature</code> or
-          &nbsp;<code className="base--code">conditions</code>.
-          The output includes
-          the top classification and a confidence score.
+        <h2 className="base--h2">사이버센터 관련 문의를 Watson에게 하세요!</h2>
+        <p className="base--p" >Watson Natural Language Classifier 서비스가 보험 관련 질문을 자동으로 카테고리화합
+
+니다. 
+          본 데모에서, Watson은 보험관련 질문이 
+          <code className="base--code">입금</code>,
+          &nbsp;<code className="base--code">출금</code>
+          &nbsp;<code className="base--code">계약변경</code>
+          &nbsp;<code className="base--code">사고보험금</code>
+          &nbsp;<code className="base--code">신계약</code>
+          &nbsp;<code className="base--code">이용관련</code>
+          등의 카테고리로 분류하여 결정하도록 훈련되어 있습니다. 
+          산출물은 분류기준과 일치율로 구성되어 있습니다. 
         </p>
         <div className="question-input">
           <div className="question-input--input-container">
@@ -65,7 +70,7 @@ export default React.createClass({
               onChange={this.handleInputChange}
               onKeyPress={this.handleKeyPress}
               id="question"
-              placeholder="Enter a weather question or Try a sample question below"
+              placeholder="사이버센터 관련 질문을 입력하거나 아래의 샘플 질문을 클릭하세요"
               className="base--input question-input--input"
               required="true"
             />
@@ -76,11 +81,11 @@ export default React.createClass({
               onClick={this.onSubmit}
               className="base--button question-input--submit-button"
             >
-              Ask
+              질문하기
             </button>
           </div>
         </div>
-        <h3 className="base--h3">Sample questions</h3>
+        <h3 className="base--h3">자주 묻는 질문</h3>
 
         <div className="sample-questions">
           <div className="sample-questions--left">
@@ -90,7 +95,7 @@ export default React.createClass({
                   className="base--a"
                   onClick={this.onSampleQuestionClick}
                 >
-                  Is it hot outside?
+                  보안카드를 분실했습니다. 어떻게 해야 하나요? 
                 </a>
               </li>
               <li className="base--li">
@@ -98,7 +103,7 @@ export default React.createClass({
                   className="base--a"
                   onClick={this.onSampleQuestionClick}
                 >
-                  What is the expected high for today?
+                  연금개시나이 변경이 가능한가요?
                 </a>
               </li>
               <li className="base--li">
@@ -106,7 +111,7 @@ export default React.createClass({
                   className="base--a"
                   onClick={this.onSampleQuestionClick}
                 >
-                  Will it be foggy tomorrow morning?
+                  연금개시가 도래되었는데 어떻게 신청하면 되나요?
                 </a>
               </li>
               <li className="base--li">
@@ -114,7 +119,7 @@ export default React.createClass({
                   className="base--a"
                   onClick={this.onSampleQuestionClick}
                 >
-                  Should I prepare for sleet?
+                  청약철회가 제한되는 경우도 있나요?
                 </a>
               </li>
               <li className="base--li">
@@ -122,24 +127,41 @@ export default React.createClass({
                   className="base--a"
                   onClick={this.onSampleQuestionClick}
                 >
-                  Will there be a storm today?
+                  ------------------------------------------------------------------------------------------------------
+                </a>
+              </li>
+              <li className="base--li">
+                <a
+                  className="base--a"
+                  onClick={this.onSampleQuestionClick}
+                >
+                  보안카드를 잃어버렸는데, 재발급 가능한가요?
+                </a>
+              </li>
+              <li className="base--li">
+                <a
+                  className="base--a"
+                  onClick={this.onSampleQuestionClick}
+                >
+                  연금을 받을 수 있는 시기 변경이 가능한가요?
                 </a>
               </li>
             </ul>
           </div>
           <div className="sample-questions--right">
-            <p className="base--p">The classifier often scores well with terms that it hasn't
-              been trained on. In the sample questions, the words "sleet," or "foggy,"
-              are not part of the&nbsp;
+            <p className="base--p">분류기는 훈련을 받지 않은 용어로 스코어링을 하는 경우가 많습니다. 
+              트레이닝 질문 데이터에서는 "잃어버리다" 또는 "시기" 이라는 단어는&nbsp;
               <a
                 className="base--a"
-                href="https://github.com/watson-developer-cloud/natural-language-classifier-nodejs/blob/master/training/weather_data_train.csv"
+                href="https://github.com/watson-developer-cloud/natural-language-classifier-
+
+nodejs/blob/master/training/Hanwha_FAQ_training_1.csv"
                 target="_blank"
                 rel="noopener noreferrer"
               >training data
-              </a>, yet the classifier correctly handles questions about them.
+              </a>의 일부가 아니지만 분류자는 올바르게 그에 대한 질문을 처리합니다.
             </p>
-          </div>
+          </div>   
         </div>
       </div>
     );
